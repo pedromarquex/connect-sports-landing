@@ -464,6 +464,24 @@ h6 {
   background: #17b57d;
 }
 
+#hero .btn-secondary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: transparent;
+  margin-left: 10px;
+}
+
+#hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
