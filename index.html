@@ -84,8 +84,8 @@
             <h1>Inove a forma como você pratica exercícios com o <span> Connect Sports</span></h1>
             <!--<h2>We are team of talented designers making websites with Bootstrap</h2>-->
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Saber mais</a>
               <a href="#contact" class="btn-get-started scrollto">Inscreva-se!</a>
+              <a href="#about" class="btn-secondary scrollto">Saber mais</a>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch">
             <a href="https://www.youtube.com/watch?v=t5ztFHtwCZs" class="glightbox play-btn mb-4"></a>
           </div>
 
@@ -174,16 +174,17 @@
         <div class="section-title" data-aos="fade-up">
           <h2>Time</h2>
           <p>Nossa Equipe</p>
+          <h5>Somos quatro estudantes do curso de Computação da Universidade Federal Piauí (UFPI). Estamos desenvolvendo o Connect Sports com o intuito de pôr em prática os conhecimentos acadêmicos que adquirimos ao longo da nossa formação.</h5>
         </div>
 
         <div class="row" data-aos="fade-left">
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <!--<div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>-->
               <div class="member-info">
                 <h4>Adailton</h4>
-                <span>Chief Executive Officer</span>
+                <span>Back-end</span>
                 
               </div>
             </div>
@@ -191,7 +192,7 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <!--<div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>-->
               <div class="member-info">
                 <h4>Ana Letícia</h4>
                 <span>Front-End</span>
@@ -202,7 +203,7 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <!--<div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>-->
               <div class="member-info">
                 <h4>Idelfonso</h4>
                 <span>Back-end</span>
@@ -213,7 +214,7 @@
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <!--<div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>-->
               <div class="member-info">
                 <h4>Pedro Marques</h4>
                 <span>Full stack</span>
@@ -225,7 +226,8 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section> 
+    <!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -245,7 +247,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>pedro.marques@ufpi.edu.br</p>
               </div>
 
             </div>
@@ -254,20 +256,24 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="post" role="form" class="php-email-form" id="form">
 
               <div class="form-group mt-3">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Seu melhor email" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Comentário/Sugestão" ></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Deixe-nos uma mensagem ou sugestão (opcional)"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Muito obrigado por acreditar no nosso projeto!</div>
               </div>
-              <div class="text-center"><button type="submit">Enviar</button></div>
+              <div class="text-center">
+                <button 
+                  type="submit"
+                  id="submit"
+                >Enviar</button></div>
             </form>
 
           </div>
@@ -288,10 +294,71 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script type="module">
+
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  // Import the functions you need from the SDKs you need
+    import {
+      getFirestore,
+      collection,
+      doc,
+      setDoc,
+      getDocs,
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJW7Op35dQZjWQvxD24UXATsBTBrjf_y8",
+    authDomain: "connect-sports-landing.firebaseapp.com",
+    projectId: "connect-sports-landing",
+    storageBucket: "connect-sports-landing.appspot.com",
+    messagingSenderId: "77306183366",
+    appId: "1:77306183366:web:cda78325495c61db8ca1c7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // console.log(app)
+  const database = getFirestore(app);
+
+    const form = document.getElementById('form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      
+      const email = document.getElementById('email')
+      const message = document.getElementById('message')
+
+      const usersCollection = collection(database, 'users');
+
+      const payload = {
+        email: email.value,
+        message: message.value
+      }
+
+      const docRef = doc(usersCollection, email.value);
+
+      setDoc(docRef, payload);
+
+      form.reset();
+
+      // show thank you message
+
+      const sentMessage = document.querySelector('.sent-message');
+      sentMessage.style.display = 'block';
+
+  })
+  </script>
 
 </body>
 
